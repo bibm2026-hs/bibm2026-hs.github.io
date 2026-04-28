@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -687,6 +687,537 @@
       <div class="chair-card"><div class="avatar-placeholder">V</div><div class="chair-name">[Visa Contact Placeholder B]</div><div class="chair-title">Visa Information Contact</div><a href="mailto:placeholder@university.edu">placeholder@university.edu</a></div>
     </div>
   </section> -->
+
+  <a id="back-to-top" href="#page-top">&#8593; Back to Top</a>
+
+</div>
+
+<footer>
+  <p>IEEE BIBM 2026 Undergraduate and High School Symposium &middot; Hosted with <a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">IEEE BIBM 2026</a></p>
+  <p style="margin-top:.4rem;">Source: <a href="https://github.com/fengjiang02/2026-bibm-hs" target="_blank">github.com/fengjiang02/2026-bibm-hs</a></p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav#top a[href^="#"]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector('nav#top a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE BIBM 2026 UGHS — Undergraduate & High School Symposium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue:      #004f9f;
+      --blue-dark: #003070;
+      --blue-mid:  #1565c0;
+      --accent:    #0077cc;
+      --gold:      #b8860b;
+      --bg:        #f8f9fc;
+      --surface:   #ffffff;
+      --border:    #d0d7e3;
+      --text:      #1a1f2e;
+      --muted:     #5a6275;
+      --mono:      'IBM Plex Mono', monospace;
+      --serif:     'Source Serif 4', Georgia, serif;
+      --sans:      'IBM Plex Sans', system-ui, sans-serif;
+      --nav-h:     56px;
+      --radius:    6px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.65; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    /* Nav */
+    nav#top {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--blue-dark); height: var(--nav-h);
+      overflow-x: auto; white-space: nowrap;
+      display: flex; align-items: center; padding: 0 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    nav#top a {
+      color: rgba(255,255,255,.85); font-family: var(--sans);
+      font-size: .78rem; font-weight: 500; letter-spacing: .02em;
+      padding: 0 .85rem; height: var(--nav-h);
+      display: inline-flex; align-items: center;
+      border-bottom: 3px solid transparent;
+      transition: color .15s, border-color .15s;
+      text-transform: uppercase; flex-shrink: 0;
+    }
+    nav#top a:hover, nav#top a.active {
+      color: #fff; border-bottom-color: var(--gold); text-decoration: none;
+    }
+    nav#top .nav-brand {
+      font-family: var(--serif); font-size: .95rem; font-weight: 700;
+      color: #fff; letter-spacing: .01em;
+      padding-right: 1.2rem; border-right: 1px solid rgba(255,255,255,.25);
+      margin-right: .4rem; flex-shrink: 0;
+      border-bottom: none !important; text-transform: none;
+    }
+    nav#top .nav-brand:hover { color: var(--gold); }
+
+    /* Hero — Dallas photo, no overlay */
+    #home-hero {
+      background: url('https://www3.cs.stonybrook.edu/~bibm2026/image/2560px-Dallas_view.jpg') center/cover no-repeat;
+      color: #fff; padding: 5rem 2rem 4.5rem; text-align: center;
+    }
+    #home-hero .badge {
+      display: inline-block;
+      background: rgba(0,0,0,.4); border: 1px solid rgba(255,255,255,.5);
+      color: #fff; font-family: var(--mono); font-size: .72rem;
+      letter-spacing: .12em; padding: .3rem .9rem; border-radius: 2rem;
+      margin-bottom: 1.2rem; text-transform: uppercase;
+    }
+    #home-hero h1 {
+      font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700; line-height: 1.2; margin-bottom: .7rem;
+      text-shadow: 0 2px 14px rgba(0,0,0,.9), 0 1px 4px rgba(0,0,0,1);
+    }
+    #home-hero .subtitle {
+      font-size: 1.1rem; font-weight: 700; max-width: 640px; margin: 0 auto 1.5rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,.9);
+    }
+    #home-hero .meta {
+      display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;
+      font-size: .95rem; font-weight: 700; text-shadow: 0 1px 6px rgba(0,0,0,.9);
+    }
+    #home-hero .meta span::before { content: '📍 '; }
+    #home-hero .meta time::before { content: '📅 '; }
+
+    /* Page body */
+    .page-body { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+    section { padding-top: 3rem; }
+    section h2 {
+      font-family: var(--serif); font-size: 1.6rem; font-weight: 700;
+      color: var(--blue-dark); border-bottom: 2px solid var(--blue);
+      padding-bottom: .4rem; margin-bottom: 1.4rem;
+    }
+    section h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--blue); margin: 1.6rem 0 .6rem; }
+    section p { margin-bottom: .9rem; }
+    section ul, section ol { padding-left: 1.5rem; margin-bottom: .9rem; }
+    section li { margin-bottom: .35rem; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    .announce {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--blue); border-radius: var(--radius);
+      padding: 1.2rem 1.5rem; margin-bottom: 1.5rem;
+    }
+
+    /* Tentative notice banner */
+    .tentative-notice {
+      background: #fffbe6; border: 1px solid #e6c84a;
+      border-left: 4px solid var(--gold); border-radius: var(--radius);
+      padding: 1rem 1.4rem; margin-bottom: 1.5rem;
+      font-size: .9rem; color: #5a4a00;
+    }
+    .tentative-notice strong { color: #7a6200; }
+
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    thead th { background: var(--blue-dark); color: #fff; font-weight: 600; padding: .55rem .8rem; text-align: left; }
+    tbody tr:nth-child(even) { background: #eef2f8; }
+    tbody td { padding: .5rem .8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .paper-id {
+      font-family: var(--mono); background: #e8edf7; border: 1px solid #c5cfe0;
+      padding: .1em .4em; border-radius: 3px; font-size: .8em; white-space: nowrap;
+    }
+
+    /* Session blocks */
+    .session-block {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); margin-bottom: 1.2rem; overflow: hidden;
+    }
+    .session-block summary {
+      cursor: pointer; padding: .75rem 1rem; font-weight: 600;
+      background: #eef2f8; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .session-block summary::after { content: '▼'; font-size: .7rem; color: var(--muted); }
+    .session-block[open] summary::after { content: '▲'; }
+    .session-block .session-inner { padding: .5rem 1rem 1rem; }
+
+    /* Chair grid */
+    .chair-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.2rem; margin-bottom: 1.5rem; }
+    .chair-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; text-align: center; }
+    .chair-card .chair-name { font-weight: 600; font-size: .95rem; color: var(--blue-dark); }
+    .chair-card .chair-title { font-size: .8rem; color: var(--muted); margin-top: .25rem; line-height: 1.4; }
+    .chair-card a { font-size: .8rem; }
+    .avatar-placeholder {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, #c5cfe0, #a0b0cc);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto .7rem; font-family: var(--serif); font-size: 1.4rem;
+      color: var(--blue-dark); font-weight: 700;
+    }
+
+    /* Why list */
+    .why-list { list-style: none; padding: 0; }
+    .why-list li { padding: .6rem 0 .6rem 2rem; position: relative; border-bottom: 1px solid var(--border); }
+    .why-list li:last-child { border-bottom: none; }
+    .why-list li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); }
+
+    /* Dates */
+    .dates-list { list-style: none; padding: 0; }
+    .dates-list li { display: flex; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .dates-list li:last-child { border-bottom: none; }
+    .dates-list .date-label { font-weight: 600; color: var(--blue-dark); min-width: 260px; }
+    .dates-list .date-val { font-family: var(--mono); font-size: .88rem; color: var(--muted); }
+
+    /* Buttons */
+    .btn { display: inline-block; background: var(--blue); color: #fff !important; padding: .6rem 1.4rem; border-radius: var(--radius); font-weight: 600; font-size: .9rem; margin-right: .6rem; margin-bottom: .6rem; transition: background .15s; }
+    .btn:hover { background: var(--blue-dark); text-decoration: none; }
+    .btn-outline { background: transparent; color: var(--blue) !important; border: 2px solid var(--blue); }
+    .btn-outline:hover { background: var(--blue); color: #fff !important; }
+
+    /* Back to top */
+    #back-to-top {
+      display: block; text-align: center; margin: 3rem auto 0;
+      width: fit-content; background: var(--blue-dark); color: #fff !important;
+      padding: .65rem 2rem; border-radius: 2rem; font-size: .9rem;
+      font-weight: 600; letter-spacing: .05em;
+      transition: background .15s, transform .15s;
+    }
+    #back-to-top:hover { background: var(--blue); transform: translateY(-2px); text-decoration: none; }
+
+    .agenda-back { font-size: .85rem; color: var(--muted); margin-bottom: .5rem; }
+    .agenda-back a { color: var(--accent); }
+    .chair-summary { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1rem; }
+    .chair-pill { background: #eef2f8; border: 1px solid #c5cfe0; border-radius: 4px; padding: .3rem .7rem; font-size: .82rem; }
+    .chair-pill strong { color: var(--blue-dark); }
+
+    .board-diagram { border: 2px solid var(--border); border-radius: var(--radius); padding: 1rem; max-width: 480px; margin: 1rem 0 1.5rem; background: var(--surface); }
+    .board-row { display: flex; gap: .5rem; margin-top: .5rem; }
+    .board-cell { flex: 1; border: 1px dashed var(--blue); border-radius: 4px; padding: .6rem; text-align: center; font-size: .78rem; color: var(--muted); }
+    .board-label { font-size: .75rem; color: var(--muted); margin-top: .4rem; }
+
+    footer { background: var(--blue-dark); color: rgba(255,255,255,.7); text-align: center; padding: 1.5rem 1rem; font-size: .82rem; margin-top: 3rem; }
+    footer a { color: rgba(255,255,255,.85); }
+
+    @media (max-width: 600px) {
+      .chair-grid { grid-template-columns: 1fr 1fr; }
+      .dates-list .date-label { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="page-top"></div>
+<nav id="top">
+  <a href="#page-top" class="nav-brand">IEEE BIBM 2026 UGHS</a>
+  <a href="#home">Home</a>
+  <a href="#why">Why</a>
+  <a href="#program">Agenda</a>
+  <a href="#poster">Poster</a>
+  <a href="#topics">Scope</a>
+  <a href="#eligibility">Eligibility</a>
+  <a href="#attendance">In-Person Policy</a>
+  <a href="#format">Format</a>
+  <a href="#ethics">Ethics</a>
+  <a href="#dates">Important Dates</a>
+  <a href="#venue">Venue &amp; Hotels</a>
+  <a href="#submit">Submission</a>
+  <a href="#registration">Registration</a>
+  <a href="#chairs">Program Co-Chairs</a>
+</nav>
+
+<div id="home-hero">
+  <div class="badge">IEEE BIBM 2026 · UGHS</div>
+  <h1>IEEE BIBM 2026 UGHS Symposium</h1>
+  <p class="subtitle">IEEE BIBM 2026: Undergraduate and High School Symposium</p>
+  <div class="meta">
+    <time>TBD, 2026 (Full Day)</time>
+    <span>Dallas, USA</span>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <section id="home">
+    <h2>Home</h2>
+    <div class="announce">
+      <p>We are delighted to announce the <strong>1st Undergraduate and High School Symposium</strong>,
+      to be held as part of the
+      <a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">IEEE International Conference on Bioinformatics and Biomedicine (BIBM) 2026</a>.
+      This symposium aims to provide a platform for young researchers to showcase their innovative work in the field of bioinformatics, biomedicine, and related disciplines.</p>
+    </div>
+    <p>Hosted with the <a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">IEEE International Conference on Bioinformatics and Biomedicine (BIBM) 2026</a>.</p>
+  </section>
+
+  <hr />
+
+  <section id="why">
+    <h2>Why Participate in this Symposium?</h2>
+    <ul class="why-list">
+      <li>Present your research to an international audience at one of the premier bioinformatics and biomedicine conferences.</li>
+      <li>Compete for <strong>Outstanding Paper Awards</strong>, <strong>Runner-Up Awards</strong>, and <strong>Rising Star Awards</strong> honoring exceptional student contributions.</li>
+      <li>Interact directly with top AI and biomedical researchers, industry innovators, and funding agency representatives.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <!-- ================================================================
+       PROGRAM AGENDA
+       NOTE: Detailed oral session paper lists are commented out below
+       and will be added once the final program is confirmed.
+       ================================================================ -->
+  <section id="program">
+    <h2>Program Agenda</h2>
+
+    <div class="tentative-notice">
+      <strong>📋 Tentative Program</strong> — The agenda below reflects the planned structure of the symposium. Detailed session assignments, speaker names, and paper listings will be published after the review process is complete. Check back for updates.
+    </div>
+
+    <h3>Day 1 — Conference Banquet</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Time</th><th>Event</th><th>Location</th></tr></thead>
+      <tbody><tr><td>18:00–21:00</td><td>Banquet</td><td>TBD Venue</td></tr></tbody>
+    </table></div>
+
+    <h3 id="program-h2">Day 2 — Full-Day UGHS Program</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Time</th><th>Event</th><th>Speaker / Notes</th></tr></thead>
+      <tbody>
+        <tr><td>09:00–10:00</td><td><strong>Keynote (50 mins)</strong><br>Location: TBD Ballroom</td><td><strong>Keynote Speech</strong><br>TBD</td></tr>
+        <tr><td>10:00–10:30</td><td>Coffee Break<br>Location: TBD</td><td>—</td></tr>
+        <tr><td>10:30–11:25</td><td>Fireside Chat (50 mins)<br>Location: TBD Room</td><td>Moderator: TBD</td></tr>
+        <tr><td>11:30–12:25</td><td>Panel with Parents (50 mins)<br>Location: TBD Room</td><td>Panelists: TBD</td></tr>
+        <tr><td>12:25–12:30</td><td>Poster Preparation</td><td>—</td></tr>
+        <tr><td>12:30–14:00</td><td>Poster Session (Lunch)<br>Location: TBD</td><td>All Authors</td></tr>
+        <tr><td>14:00–15:30</td><td>Oral Presentations (12 mins × 7 papers × 4 rooms)</td><td>TBD after paper assignments</td></tr>
+        <tr><td>15:30–16:00</td><td>Coffee Break<br>Location: TBD</td><td>—</td></tr>
+        <tr><td>16:00–17:30</td><td>Oral Presentations (12 mins × 7 papers × 4 rooms)</td><td>TBD after paper assignments</td></tr>
+        <tr><td>17:30</td><td>Closing (Award Announcements)<br>Location: TBD Room</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+
+    <!--
+    ====================================================================
+    DETAILED ORAL SESSION PAPER LISTINGS — TO BE ADDED AFTER FINALIZATION
+    ====================================================================
+
+    <h3 id="oral-1400">Oral Presentations · 14:00–15:30</h3>
+    ...UH1–UH4 session blocks (B001–B026)...
+
+    <h3 id="oral-1600">Oral Presentations · 16:00–17:30</h3>
+    ...UH5–UH8 session blocks (B027–B051)...
+
+    <h3 id="parent-panel">Parent Panel — Panelists</h3>
+    ...panelist table and panel themes...
+
+    ====================================================================
+    -->
+
+    <h3>Parent Panel — Themes</h3>
+    <p>The following themes will be discussed during the Parent Panel (11:30–12:25).</p>
+    <ol>
+      <li><strong>Focus of Learning</strong> — Should the focus be on using AI/bioinformatics tools in daily life, understanding how they work, or learning how to code and build them?</li>
+      <li><strong>Age-Appropriate Onramps</strong> — What are age-appropriate ways to introduce bioinformatics and biomedical AI concepts across different age groups?</li>
+      <li><strong>Classroom Use</strong> — Should we encourage teachers to use AI/bioinformatics tools, students to use them, or both?</li>
+      <li><strong>Healthy Relationship with AI</strong> — How can we help children develop a balanced relationship with AI—avoiding over-reliance for scientific thinking?</li>
+      <li><strong>Motivation &amp; Pathways</strong> — How can we nurture children's interest in biomedical science and AI? What would a progressive plan for bioinformatics education look like?</li>
+      <li><strong>Access &amp; Resources</strong> — How can children access bioinformatics/AI learning resources from universities, research labs, or federal agencies?</li>
+    </ol>
+  </section>
+
+  <hr />
+
+  <section id="poster">
+    <h2>Poster Presentation</h2>
+    <ol>
+      <li>
+        <p>The recommended poster size is <strong>A0</strong> (33.1″ × 46.8″). Posters may be prepared in portrait or landscape orientation.</p>
+        <p>Each poster board is <strong>8 feet wide by 4 feet high</strong>. Two posters per side means each presenter has <strong>4 feet × 4 feet</strong> maximum (1.22 m × 1.22 m), including margins.</p>
+        <div class="board-diagram">
+          <div style="font-weight:600; font-size:.85rem; color:var(--blue-dark);">Poster Board Layout (one side)</div>
+          <div class="board-row">
+            <div class="board-cell">Poster Area<br>4′ × 4′</div>
+            <div class="board-cell">Poster Area<br>4′ × 4′</div>
+          </div>
+          <div class="board-label">← 8 feet wide | 4 feet high →</div>
+        </div>
+      </li>
+      <li>Every student must print their own poster and bring it to the venue. We will provide boards, pushpins, and tape.</li>
+    </ol>
+  </section>
+
+  <hr />
+
+  <section id="topics">
+    <h2>Scope of Topics</h2>
+    <p>We invite submissions of original research from undergraduate and high school students on topics including but not limited to:</p>
+    <ol>
+      <li>Foundations, algorithms, models, and theory of bioinformatics and biomedical data analysis</li>
+      <li>Machine learning, deep learning, and statistical methods for genomics, proteomics, and multi-omics data</li>
+      <li>Mining heterogeneous biomedical data including text, spatio-temporal, graph, and imaging data</li>
+      <li>Bioinformatics systems and platforms, federated learning, privacy, and security</li>
+      <li>Computational drug discovery, drug-target interaction, and precision medicine</li>
+      <li>AI for clinical decision support, electronic health records (EHR), and health informatics</li>
+      <li>Biomedical image analysis, medical imaging, and computer-aided diagnosis</li>
+      <li>Large language models and foundation models for biomedical applications</li>
+      <li>Novel applications in genomics, transcriptomics, structural biology, and synthetic biology</li>
+    </ol>
+  </section>
+
+  <hr />
+
+  <section id="eligibility">
+    <h2>Eligibility</h2>
+    <ul>
+      <li>Undergraduate and high school students pursuing an academic degree at the time of submission are eligible to submit as first authors.</li>
+      <li>Each submission must have at least one student author, who should present if accepted.</li>
+      <li>Co-authorship with faculty or researchers is allowed, but the student must be the primary contributor.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section id="attendance">
+    <h2>In-Person Policy (UGHS)</h2>
+    <p>The UGHS Symposium is an <strong>in-person</strong> event. At least one student author must attend and present; otherwise the paper will not appear in the IEEE proceedings.</p>
+    <p><strong>Additional requirements for high school student authors:</strong></p>
+    <ol>
+      <li>At least one parent accompanies the student to the conference.</li>
+      <li>A signed release form (<a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">download here</a>).</li>
+      <li>An information document signed by a parent/guardian (optional high school principal signature), including paper ID, title, and parent contact.<br><strong>Template:</strong> <a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">Information Document (DOCX)</a></li>
+    </ol>
+    <p><strong>Note:</strong> School approvals are optional. One adult chaperone cannot supervise multiple students.</p>
+    <p><strong>Where to send:</strong> Email signed documents to <a href="mailto:bibm2026-ughs@placeholder.edu">bibm2026-ughs@placeholder.edu</a> before <strong>[Deadline Placeholder, 2026]</strong>.</p>
+  </section>
+
+  <hr />
+
+  <section id="format">
+    <h2>Submission Format Requirements</h2>
+    <ul>
+      <li>Follow the IEEE Computer Society Proceedings Manuscript Formatting Guidelines: <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank">ieee.org/conferences/publishing/templates.html</a>.</li>
+      <li>Undergraduate papers: max <strong>6 pages</strong> (figures, tables, references included).</li>
+      <li>High school papers: max <strong>5 pages</strong> (figures, tables, references included).</li>
+      <li>Indicate in the author affiliation whether the first author is a high school or undergraduate student.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section id="ethics">
+    <h2>Publication Ethics and Dual Submission Policy</h2>
+    <p><strong>Originality and Dual Submission:</strong> Submitted manuscripts must be original work not submitted or published elsewhere. Dual submission is strictly prohibited.</p>
+    <p><strong>Subsequent Journal Submission:</strong> Extended versions submitted to journals after conference publication must clearly disclose the prior publication and include significant new contributions.</p>
+    <p><strong>Ethical Responsibility:</strong> Authors are responsible for ethical standards in authorship, data integrity, and citation. Violations may lead to retraction and disqualification from future submissions.</p>
+  </section>
+
+  <hr />
+
+  <section id="dates">
+    <h2>Important Dates</h2>
+    <ul class="dates-list">
+      <li><span class="date-label">Paper Submission Deadline:</span><span class="date-val">August 31, 2026 &nbsp;·&nbsp; 11:59 PM AoE</span></li>
+      <li><span class="date-label">Notification of Acceptance:</span><span class="date-val">September 22, 2026</span></li>
+      <li><span class="date-label">Camera-Ready Paper Submission:</span><span class="date-val">[Placeholder Date]</span></li>
+      <li><span class="date-label">Symposium Date:</span><span class="date-val">TBD, 2026</span></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section id="venue">
+    <h2>Venue &amp; Hotels</h2>
+    <p>IEEE BIBM 2026 will be held <strong>in-person</strong> in Dallas, TX. Discounted hotel rooms are available. Please check: <a href="https://www3.cs.stonybrook.edu/~bibm2026/venue.html" target="_blank">www3.cs.stonybrook.edu/~bibm2026/venue.html</a>.</p>
+  </section>
+
+  <hr />
+
+  <section id="submit">
+    <h2>How to Submit</h2>
+    <p>
+      <a class="btn" href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">Open Submission Portal</a>
+      <a class="btn btn-outline" href="#camera-ready">Camera-Ready Instructions</a>
+    </p>
+    <ul>
+      <li>The review process is <strong>single-blind</strong> (reviewers anonymous; authors visible).</li>
+      <li>Accepted papers will appear in the BIBM Workshop Proceedings (IEEE Computer Society Press).</li>
+      <li>Each accepted paper must have <strong>at least one author registered</strong> and present in person.</li>
+    </ul>
+    <h3 id="camera-ready">Camera-Ready Submission</h3>
+    <p><strong>Final deadline:</strong> [Placeholder Date], 2026.</p>
+    <ul>
+      <li>Follow all IEEE formatting and page limits. Use high-clarity figures.</li>
+      <li><strong>Submission site:</strong> <a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">IEEE CPS Login</a></li>
+      <li><strong>PDF eXpress validation:</strong> Conference Record [TBD].</li>
+      <li>Use your <em>conference submission ID</em> (not the PDF eXpress ID) on the registration form.</li>
+      <li>Questions? Contact <a href="mailto:bibm2026-ughs@placeholder.edu">bibm2026-ughs@placeholder.edu</a>.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section id="registration">
+    <h2>Registration</h2>
+    <p>We will provide the <strong>discount registration code</strong> in the camera-ready email. The discounted fee is the <strong>one-day symposium fee</strong>, covering <strong>one student and one parent companion</strong>, including the conference banquet.</p>
+  </section>
+
+  <hr />
+
+  <section id="chairs">
+    <h2>Program Co-Chairs</h2>
+    <p>For questions, please contact the symposium co-chairs.</p>
+    <div class="chair-grid">
+
+      <div class="chair-card">
+        <img src="https://leafnlp.org/img/pwang44.jpeg" alt="Ping Wang"
+             style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto .7rem;display:block;">
+        <div class="chair-name">Ping Wang</div>
+        <div class="chair-title">Assistant Professor<br>Stevens Institute of Technology</div>
+        <a href="mailto:pwang@stevens.edu">pwang44@stevens.edu</a>
+      </div>
+
+      <div class="chair-card">
+        <img src="https://yuzhiguo07.github.io/assets/img/my-passport-photo-new.png" alt="Yuzhi Guo"
+             style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto .7rem;display:block;">
+        <div class="chair-name">Yuzhi Guo</div>
+        <div class="chair-title">Assistant Professor<br>Kent State University</div>
+      </div>
+
+      <div class="chair-card">
+        <img src="https://ranger.uta.edu/~huang/image/HJZ/HJZ23.jpg" alt="Junzhou Huang"
+             style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto .7rem;display:block;">
+        <div class="chair-name">Junzhou Huang</div>
+        <div class="chair-title">Jenkins Garrett Professor<br>The University of Texas at Arlington</div>
+        <a href="mailto:jzhuang@uta.edu">jzhuang@uta.edu</a>
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
 
   <a id="back-to-top" href="#page-top">&#8593; Back to Top</a>
 
