@@ -54,6 +54,7 @@ h2 { font-size: 1.25rem; margin: 0 0 14px; }
 .spanall { grid-column: 2 / -1; }
 .band { background: var(--band); border-radius: 8px; padding: 6px 14px; color: var(--muted); }
 .band.strong { background: var(--accent-soft); color: var(--ink); font-weight: 700; }
+.band.poster { background: var(--surface); border: 1.5px dashed var(--accent); color: var(--ink); font-weight: 700; }
 .band small { display: block; font-weight: 400; font-size: 0.88rem; color: var(--muted); }
 .card { display: flex; flex-direction: column; gap: 2px; background: var(--surface); border: 1px solid var(--line);
   border-left: 4px solid var(--accent); border-radius: 8px; padding: 10px 12px; color: inherit; text-decoration: none; min-height: 92px; }
@@ -123,9 +124,10 @@ a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <h2>At a glance</h2>
     
   <div class="grid-head" aria-hidden="true"><span></span><span>Reunion E</span><span>Reunion F</span><span>Bryan-Beeman A</span><span>Bryan-Beeman B</span><span>Reverchon A</span></div>
+  <div class="slot shared"><span class="time">All day</span><div class="spanall band poster">Posters on display all day<small>Reunion GH. Poster presenters stand by their posters during coffee breaks</small></div></div>
   <div class="slot shared"><span class="time">10:20 – 11:20</span><div class="spanall band strong">Opening and panel with invited panelists<small>Reunion EF</small></div></div>
   <div class="slot shared"><span class="time">11:20 – 11:30</span><div class="spanall band">Transit to Reunion ABC</div></div>
-  <div class="slot shared"><span class="time">11:30 – 12:20</span><div class="spanall band strong">Round table / mentoring<small>Reunion ABC. Poster session at the same time in Reunion GH</small></div></div>
+  <div class="slot shared"><span class="time">11:30 – 12:20</span><div class="spanall band strong">Round table / mentoring<small>Reunion ABC, open to all students</small></div></div>
   <div class="slot shared"><span class="time">12:20 – 12:30</span><div class="spanall band">Break</div></div>
   <div class="slot shared"><span class="time">12:30 – 13:30</span><div class="spanall band">Lunch, Reunion ABC</div></div>
   <div class="slot"><span class="time">13:30 – 15:30<small>2-hour sessions</small></span><a class="card" href="#session-1">
@@ -149,7 +151,7 @@ a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
         <span class="card-topic">Session 5</span>
         <span class="card-meta">13:30 – 15:30</span>
       </a></div>
-  <div class="slot shared"><span class="time">15:30 – 15:50</span><div class="spanall band">Break</div></div>
+  <div class="slot shared"><span class="time">15:30 – 15:50</span><div class="spanall band poster">Coffee break and poster session<small>Reunion GH. Poster presenters, please stand by your posters</small></div></div>
   <div class="slot"><span class="time">15:50 – 16:50<small>1-hour sessions</small></span><a class="card" href="#session-6">
         <span class="card-room">Reunion E</span>
         <span class="card-topic">Session 6</span>
@@ -262,7 +264,7 @@ a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   <div class="foot">
     <p>All presentations are given on the venue computers using the slides uploaded by November 28, 2026.</p>
-    <p>Please bring your printed poster for the poster session in Reunion GH.</p>
+    <p>Posters are on display all day in Reunion GH. Please bring your printed poster and stand by it during coffee breaks.</p>
   </div>
 </main>
 </body>
